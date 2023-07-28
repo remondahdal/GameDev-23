@@ -82,6 +82,11 @@ p {
         transform: rotateY(180deg);
     }
 }
+h2 {
+    font-size: 70px; /* "size" should be "font-size" */
+   color: gold;
+   
+}
 
 @keyframes flip {
     from {
@@ -98,7 +103,7 @@ p {
 }
 
 /* Safari-specific media query */
-@media not all and (min-resolution:.001dpcm) {
+@media (max-width: 950px) {
     @supports (-webkit-appearance:none) {
         body {
             /* Styles for Safari only */
@@ -109,27 +114,34 @@ p {
             font-size: 36px;
         }
 
-        .cards {
-            grid-template-columns: repeat(2, 140px);
-            grid-template-rows: repeat(9, 210px);
-            grid-gap: 10px;
+        #cards {
+            grid-template-columns: repeat(2, 70px);
+            grid-template-rows: repeat(9, 100px);
+            grid-gap: 24px;
         }
 
         .card {
-            height: 210px;
-            width: 140px;
+            height: 100px;
+            width: 70px;
         }
-
+        .front-image {
+            width: 35px;
+            height: 50px;
+            border-radius: 8px 8px 0 0;
+        }
         .actions button {
             padding: 10px 20px;
             font-size: 24px;
         }
 
         h2 {
-            font-size: 500px; /* "size" should be "font-size" */
-            color: gold;
-            width: 100%;
-            height: 100%;
+            font-size: 10px; /* "size" should be "font-size" */
+           color: gold;
+           
+        }
+        .card:hover {
+            width: 75px;
+            background-color: rgb(2, 255, 255);
         }
     }
 }
